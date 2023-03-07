@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  app:
+    image: node:lts-alpine3.17
+    
+    container_name: ampa-jb-web
+    
+    volumes: 
+      - ../ampa-jb-web:/app
+    
+    working_dir: /app
+    
+    ports:
+      - 3000:3000
+    
+    command: npm run dev
+  
+
+
+### PASOS PARA CREAR TODA LA ESTRUCTURA, HERRAMIENTAS Y DEPENDENCIAS con NEXT.js ###
+
+# docker compose -f dev.yml run --rm app npx create-next-app@latest --use-npm
+# docker compose -f dev.yml run --rm app npm install standard -D --use-npm --> añadir en .eslintrc.json "./node_modules/standard/eslintrc.json"
+    
