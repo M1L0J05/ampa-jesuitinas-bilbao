@@ -16,6 +16,8 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@headlessui/react": "^1.7.13",
+    "@heroicons/react": "^2.0.16",
     "autoprefixer": "^10.4.13",
     "install": "^0.13.0",
     "npm": "^9.6.0",
