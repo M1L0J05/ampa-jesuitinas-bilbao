@@ -1,4 +1,6 @@
+import Navbar from './Navbar'
 import Image from 'next/image'
+
 import Link from 'next/link'
 
 import '../styles/header.css'
@@ -24,6 +26,7 @@ export default function Header() {
           />
         </div>
       </div>
+      <Navbar />
     </header>
   )
 }
