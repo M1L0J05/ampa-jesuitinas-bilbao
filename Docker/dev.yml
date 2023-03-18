@@ -1,23 +1,20 @@
-version: "3.8"
+version: '3.8'
 
 services:
   app:
     image: node:lts-alpine3.17
-    
+
     container_name: ampa-jb-web
-    
-    volumes: 
+
+    volumes:
       - ../ampa-jb-web:/app
-    
+
     working_dir: /app
-    
+
     ports:
       - 3000:3000
-    
+
     command: npm run dev
-  
-
-
 ### PASOS PARA CREAR TODA LA ESTRUCTURA, HERRAMIENTAS Y DEPENDENCIAS con NEXT.js ###
 
 # Iniciar proyecto.
@@ -27,5 +24,5 @@ services:
 # docker compose -f dev.yml run --rm app npm install standard -D --use-npm --> añadir en .eslintrc.json "./node_modules/standard/eslintrc.json"
 # docker compose -f dev.yml run --rm app npm install npm install -D tailwindcss postcss autoprefixer --use-npm --> añadir en Tailwind (mirar la doc oficial)
 # docker compose -f dev.yml run --rm app npx tailwindcss init -p --use-npm
+# docker compose -f dev.yml run --rm app npm install @headlessui/react @heroicons/react --use-npm
 
-    
